@@ -145,7 +145,7 @@ function setupTaskInputs() {
         const textarea = event.target.closest(".todoDetails");
         if (!textarea) return;
 
-        textarea.disabled = false;
+        textarea.readOnly = false;
         textarea.focus();
     });
 
@@ -160,7 +160,7 @@ function setupTaskInputs() {
             description: textarea.value,
         });
 
-        textarea.disabled = true;
+        textarea.readOnly = true;
         rerenderApp();
     }, true);
 }

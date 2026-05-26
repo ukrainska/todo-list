@@ -59,7 +59,7 @@ function createDescription(todo) {
     textarea.name = "todoDetails";
     textarea.placeholder = "I want to start...";
     textarea.value = todo.description || "";
-    textarea.disabled = true;
+    textarea.readOnly = true;
 
     return textarea;
 }
