@@ -25,3 +25,7 @@ A todo list application build with JavaScript, HTML, CSS and Wepback.
 - Improve responsive design
 - Add better form validation
 - Add filters for completed and active tasks
+
+## Live Demo
+
+[View the project here] (https://ukrainska.github.io/todo-list/)
