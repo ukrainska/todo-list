@@ -1,0 +1,220 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: var(--font-color);
+}
+
+:root {
+    --main-color: #D3CBFE;
+    --nav-color: #F1EEFF;
+    --font-color: #484655;
+    --button-color: #E2DCFF;
+    --border-color: #B3AAFD;
+    --projects-color: #FCFFEE;
+    --organizer-color: #F3FFEE;
+    --default-color: #FAEEFF;
+    --default-title: #EBDDF2;
+    --default-p: #EFE3F4;
+    --today-color: #D7D0FF;
+}
+
+.main-page {
+    background-color: var(--main-color);
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 4fr;
+}
+
+button {
+    border-style:none;
+    padding: 0.6rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+nav, 
+.tasks {
+    margin: 0.8rem;
+    border-radius: 2rem;
+    padding: 20px 20px 0 20px;
+    border: 2px solid var(--border-color);
+}
+
+nav {
+    background-color: var(--nav-color);
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;  
+}
+
+nav button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--button-color);
+    border-radius: 20px;
+    min-height: 2rem;
+}
+
+nav button:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
+}
+
+.organizer, 
+.projects,
+.default-task {
+    display: flex;
+    flex-direction: column;
+    border-radius: 2rem;
+    padding: 20px;
+    gap: 1rem;
+}
+
+.organizer {
+    background-color: var(--organizer-color);
+}
+
+.projects {
+    background-color: var(--projects-color);
+}
+
+.tasks {
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr;
+    background-color: var(--nav-color);
+    gap: 2rem;
+}
+
+.title-row,
+.tasks p,
+.todoDetails,
+.additional,
+.additional div {
+    padding: 0.8rem;
+    border-radius: 20px;
+}
+
+.tasks p,
+.todoDetails,
+.additional div {
+    opacity: 0.8;
+    background-color: var(--default-p);
+}
+
+#date {
+    grid-column: 1/4;
+    grid-row: 1;
+    padding-bottom: 1.2rem;
+    background-color: var(--today-color);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.default-task {
+    background-color: var(--default-color);
+    border: 1px solid var(--border-color);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    
+}
+
+.default-task:hover {
+    opacity: 0.8;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+.title-row {
+    display: flex;
+    background-color: var(--default-title);
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px dotted var(--border-color);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.title-row button:hover {
+    transform: scale(1.05);
+}
+
+.todoDetails {
+    display: flex;
+    align-items: baseline;
+    border-style: none;
+}
+
+.additional {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.additional div {
+    background-color: var(--default-p);
+}
+
+.additional button {
+    background-color: var(--button-color);
+    transition: transform 0.1s ease;
+}
+
+.additional button:hover {
+    transform: scale(1.1);
+}
+
+.filters select,
+.filters option {
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 0.2rem;
+    background-color: var(--button-color);
+}
+
+.my-projects {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.my-projects h4 {
+    cursor: pointer;
+    padding: 0.5rem 0.8rem;
+    border-radius: 12px;
+}
+
+.my-projects h4:hover,
+.active-project {
+    background-color: var(--button-color);
+}
+
+.title-input,
+.due-date-input,
+.priority-select {
+    border: none;
+    border-radius: 12px;
+    padding: 0.4rem 0.6rem;
+    background-color: white;
+    color: var(--font-color);
+}
+
+.completed-task {
+    opacity: 0.7;
+}
+
+.default-task[data-priority="high"] {
+    border-left: 8px solid #f2a7a7;
+}
+
+.default-task[data-priority="medium"] {
+    border-left: 8px solid #f2d7a7;
+}
+
+.default-task[data-priority="low"] {
+    border-left: 8px solid #b9e3b2;
+}
