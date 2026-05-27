@@ -1,6 +1,6 @@
 #Todo List
 
-A todo list application build with JavaScript, HTML, CSS and Wepback.
+A todo list application built with JavaScript, HTML, CSS and Webback.
 
 ## Features
 - Add, edit and delete tasks
@@ -28,4 +28,4 @@ A todo list application build with JavaScript, HTML, CSS and Wepback.
 
 ## Live Demo
 
-[View the project here] (https://ukrainska.github.io/todo-list/)
+[View the project here](https://ukrainska.github.io/todo-list/)
